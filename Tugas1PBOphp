@@ -1,0 +1,32 @@
+<?php
+
+class User {
+    private $nama;
+    private $telepon;
+    private $email;
+    private $alamat;
+
+    public function __construct($nama, $telepon, $email, $alamat) {
+        $this->nama = $nama;
+        $this->telepon = $telepon;
+        $this->email = $email;
+        $this->alamat = $alamat;
+    }
+
+    public function getNama() {
+        return $this->nama;
+    }
+
+    public function getTelepon() {
+        return $this->telepon;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function getAlamat() {
+        return $this->alamat;
+    }
+}
+?>
