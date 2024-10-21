@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="color: black; font-size: 24px;">Selamat Datang di Halaman Beranda</h1>
+    <a href="about.html">Tentang Kami</a>
+    <button onclick="bukaBukuTamu()">Buka Buku Tamu</button>
+
+    <table id="tabelBukuTamu" border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data Buku Tamu akan ditampilkan di sini -->
+        </tbody>
+    </table>
+
+    <script>
+        function bukaBukuTamu() {
+            var nama = prompt("Masukkan Nama Anda:");
+            var email = prompt("Masukkan Email Anda:");
+            var pesan = prompt("Masukkan Pesan Anda:");
+
+            console.log("Nama: " + nama);
+            console.log("Email: " + email);
+            console.log("Pesan: " + pesan);
+
+            var table = document.getElementById("tabelBukuTamu").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+
+            cell1.textContent = nama;
+            cell2.textContent = email;
+            cell3.textContent = pesan;
+        }
+    </script>
+</body>
+
+</html>
